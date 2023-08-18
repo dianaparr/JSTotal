@@ -1,0 +1,29 @@
+/*Selecciona elemento*/
+body{
+    background-color: bisque;
+}
+
+/*Selecciona clase*/
+.principal{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Selecciona id*/
+#informacion{
+    text-align: center;
+}
+
+/*Da formato solo a los elementos que contengan un atributo especifico*/
+a[href*=".edu"]{
+    background-color: gold;
+}
+
+/*Da formato a una pseudo clase dependiendo del estado en el que se encuentre*/
+h1:hover{
+    color:red
+}
+
+/*Da formato a un pseudo elemento, una parte del elemento*/
+.principal::first-line{
+    background-color: lightgray;
+}
