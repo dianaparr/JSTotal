@@ -1,0 +1,25 @@
+/* Combinador descendiente */
+div p{
+    color: green;
+}
+
+/* Hijos directos: solo los elementos dentro de la lista ordenada */
+ol > li{
+    font-weight: bolder;
+}
+
+/* Hermanos adjacentes: solo al elemento que este inmediatamente después del principal */
+/* h2 + h3 { estilo }*/
+
+/* Hermanos generales: Todos los elementos que estan después del principal en este caso h2 */
+h2 ~ h3{
+    background-color: lightskyblue;
+}
+
+/* Combinación de selectores con combinadores: 
+SELECTOR: seleccionar algo por atributo,
+COMBINADOR: combinador descendiente <div>
+SELECTOR DE ESTADO: :hover */
+div P[align="left"]:hover{
+    background-color: gold;
+}
