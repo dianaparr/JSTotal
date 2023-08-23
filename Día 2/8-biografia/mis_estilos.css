@@ -1,0 +1,98 @@
+body{
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-size : cover;
+    height : 100vh;
+    font-family: "Gill Sans", sans-serif;
+}
+
+p{
+    font-size: medium;
+    padding-left: 1%;
+}
+
+a{
+    text-decoration-style: wavy;
+}
+
+.encabezados,h3{
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.centrar{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 10px inset #F282EA;
+}
+
+h1:hover{
+    color: #F282EA;
+    cursor: pointer;
+}
+
+#presentacion,
+#infancia,
+#adolescencia{
+    border: 5px solid;
+}
+
+#presentacion{
+    border-color: #8B072D;
+    background-color: #fbebc0;
+}
+
+#infancia{
+    border-color: #ed561a;
+    background-color: #b4f5ee;
+}
+
+#adolescencia{
+    border-color: #02124e;
+    background-color: #f7b63f;
+}
+
+#adultez{
+    border-color: #c20808;
+    background-color: #12f185;
+}
+
+.drop-cap {
+    float: left;
+    font-size: 3.4em;
+    line-height: 0.8;
+    margin-right: .6rem;
+}
+
+.resaltado{
+    background-color: rgb(215, 247, 217);
+    font-style: italic;
+}
+
+.contenedor1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: 5px dotted;
+    border-color: #8B072D;
+    width: 50%;
+    margin:0px 0px 0px 100px;
+}
+
+.negrita{
+    font-weight: 100;
+    font-family: cursive;
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor2 a[href*=".html"]:hover{
+    background-color: gold;
+    text-decoration: none;
+}
