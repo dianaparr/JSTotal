@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonidos</title>
+    <!--colocarle estilo a la etiqueta audio visible-->
+    <!--
+        <style>
+        audio::-webkit-media-controls-panel{
+            background-color: coral;
+        }
+        </style>
+    -->
+
+</head>
+<body>
+    <!--escoger el tiempo en que suceda el timeout-->
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 id="textoAlarma" style="color:red">APAGADO</h1>
+
+    <!--colocar un elemento audio invisible-->
+    <audio id="audioAlarma" src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido NO habilitado
+    </audio>
+
+    <!--elemento de audio visible-->
+    <!-- 
+    <audio controls src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido NO habilitado
+    </audio> 
+    -->
+
+    <script>
+        let elementoSegundos = document.getElementById('tiempoElegido');
+        let elementoTextoAlarma = document.getElementById('textoAlarma');
+        
+        let elementoSonidoAlarma = document.getElementById('audioAlarma');
+
+        function comenzarTiempo() {
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+        }
+        function tiempoCumplido() {
+            elementoTextoAlarma.textContent = 'ENCENDIDO';
+            elementoTextoAlarma.style.color = 'green';
+
+            // usa variable elementoSonidoAlarma que idetifica la etiqueta audio, usa la función play() integrada
+            elementoSonidoAlarma.play();
+        }
+    </script>
+</body>
+</html>
