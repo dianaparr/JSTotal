@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarReloj()">
+    <!--escoger el tiempo en que suceda el timeout-->
+    <input type="number" id="tiempoElegido">
+    <button onclick="comenzarTiempo()">Alarma</button>
+    <h1 id="textoAlarma">00:00:00</h1>
+
+    <!--colocar un elemento audio invisible-->
+    <audio id="audioAlarma" src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido NO habilitado
+    </audio>
+
+    <script>
+        let elementoSegundos = document.getElementById('tiempoElegido');
+        let elementoTextoAlarma = document.getElementById('textoAlarma');
+        
+        let elementoSonidoAlarma = document.getElementById('audioAlarma');
+
+        function comenzarTiempo() {
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
+        }
+        function tiempoCumplido() {
+            elementoTextoAlarma.style.color = 'green';
+
+            // usa variable elementoSonidoAlarma que idetifica la etiqueta audio, usa la función play() integrada
+            elementoSonidoAlarma.play();
+        }
+        
+        // para que el reloj comience a funcionar:
+        function comenzarReloj() {
+            // llama una función CADA VEZ que se cumpla un determinado tiempo
+            setInterval(ticTac, 1000);
+        }
+        function ticTac() {
+            let tiempoActual = new Date();
+            let hora = String(tiempoActual.getHours()).padStart(2, '0');
+            let minutos = String(tiempoActual.getMinutes()).padStart(2, '0');
+            let segundos = String(tiempoActual.getSeconds()).padStart(2, '0');
+
+            let textoHora = hora + ":" + minutos + ":" + segundos;
+            elementoTextoAlarma.textContent = textoHora;
+        }
+    </script>
+</body>
+</html>
