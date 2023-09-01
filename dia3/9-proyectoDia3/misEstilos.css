@@ -1,0 +1,8 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+}
+
+h1 span {
+    color:darkgreen;
+}

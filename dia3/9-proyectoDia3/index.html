@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un juego de preguntas</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="displayCountdown()">
+    <h1>Te quedan <span id="timeOut"></span> segundos!!</h1>
+    <br/>
+    <p>¿Cómo se llama el proceso por el cual las plantas se alimentan?</p>
+    <input type="text" id="q1">
+    <br/>
+    <p>¿Cuál es el órgano más grande del cuerpo humano?</p>
+    <input type="text" id="q2">
+    <br/>
+    <p>¿Qué descubrieron Marie Curie y su esposo Pierre?</p>
+    <input type="text" id="q3">
+    <br/>
+    <p>¿Cuántos días tiene un año bisiesto?</p>
+    <input type="text" id="q4">
+    <br/>
+    <p>¿Cuál es el gas mayoritario de la atmósfera terrestre?</p>
+    <input type="text" id="q5">
+    <br/><br/>
+    
+    <button onclick="finish()">Listo!</button>
+    <br><br>
+    <button onclick="reload()">Volverlo a intentar</button>
+
+    <audio id="audioAlarma">
+        <source src="Audios/alarma.mp3" type="audio/mpeg">
+        Sonido NO habilitado
+    </audio>
+
+    <script>
+        let timeFinish;
+        let intervalTime;
+
+        function displayCountdown() {
+            timeFinish = setTimeout(timeCheck, 30000);
+            intervalTime = setInterval(ticTac, 1000);
+            document.getElementById("timeOut").textContent = 30;
+        }
+        function ticTac() {
+            let time = document.getElementById("timeOut").textContent;
+            document.getElementById("timeOut").textContent = time - 1;
+        }
+        function timeCheck() {
+            clearInterval(intervalTime);
+            document.getElementById("timeOut").textContent = 0;
+            document.getElementById("timeOut").style.color = 'pink';
+            document.getElementById("audioAlarma").play();
+            alert("GEAME OVER: Se acabó el tiempo. Intenta nuevamente");
+        }
+        function finish() {
+            clearTimeout(timeFinish);
+            clearInterval(intervalTime);
+
+            let dateShow = new Date();
+            let answer1 = document.getElementById("q1").value;
+            let answer2 = document.getElementById("q2").value;
+            let answer3 = document.getElementById("q3").value;
+            let answer4 = document.getElementById("q4").value;
+            let answer5 = document.getElementById("q5").value;
+
+            let message = dateShow.toLocaleDateString("es-Es") + "\n" +
+                            "1. " + answer1 + "\n" +
+                            "2. " + answer2 + "\n" +
+                            "3. " + answer3 + "\n" +
+                            "4. " + answer4 + "\n" +
+                            "5. " + answer5;
+
+            alert(message);
+        }
+        function reload() {
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>
