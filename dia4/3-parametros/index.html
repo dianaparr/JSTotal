@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parámetros</title>
+</head>
+<body>
+
+    <p>Primer número</p>
+    <input type="number" id="primerNumero">
+
+    <p>Segundo número</p>
+    <input type="number" id="segundoNumero">
+
+    <button onclick="mostrarResultado()">
+        Calcular
+    </button>
+
+    <h2 id="textoResultado"></h2>
+
+    <script>
+        function sumar(numero1, numero2) {
+            resultado = +numero1 + +numero2;
+            return resultado;
+        }
+        function mostrarResultado(params) {
+            let elemento1 = document.getElementById("primerNumero");
+            let elemento2 = document.getElementById("segundoNumero");
+            let elementoTexto = document.getElementById("textoResultado");
+            let elementoSuma = sumar(elemento1, elemento2);
+
+            elementoTexto.textContent = elementoSuma;
+        }
+    </script>
+</body>
+</html>
