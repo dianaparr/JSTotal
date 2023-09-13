@@ -6,13 +6,17 @@
     <title>Random</title>
 </head>
 <body>
-    <button onclick="crearAleatorio()">Dame un # aleatorio</button>
+    <button onclick="crearAleatorio(10,15)">Dame un # aleatorio</button>
     <h2>Número aleatorio: <span id="textoAleatorio">____</span></h2>
 
     <script>
         let elementRandom = document.getElementById("textoAleatorio");
-        function crearAleatorio() {
-            elementRandom.textContent = Math.random();
+        function crearAleatorio(min, max) {
+            // definir un número máximo y mínimo
+            max = max + 1;
+            result = Math.floor(Math.random() * (max - min) + min);
+            // tomar el primer decimal (el número luego del punto decimal)
+            elementRandom.textContent = result;
         }
     </script>
 </body>
