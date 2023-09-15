@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="calculadora.js"></script>
+</head>
+<body>
+    <h2>Calculadora</h2>
+    <input type="text" id="number1" placeholder="Acá va el 1er número">
+    <input type="text" id="number2" placeholder="Acá va el 2do número">
+    <br /><br />
+
+    <!--Suma, resta, multiplicación, división, raíz cuadrada, 
+        potencia, valor absoluto, random, round, floor y ceil. 
+        A cada botón, en el evento onclick, debemos direccionar 
+        a una función diferente que va a hacer la operación en cuestión.-->
+    <button onclick="sum()">&#10133;</button>
+    <button onclick="subs()">&#10134;</button>
+    <button onclick="mult()">&#10006;</button>
+    <button onclick="div()">&#10135;</button>
+    <br /><br />
+    <button onclick="sqrt()">Raíz cuadrada</button>
+    <button onclick="pow()">Potencia</button>
+    <br />
+    <button onclick="abs()">Valor absoluto</button>
+    <button onclick="random()"># random</button>
+    <h3>Resultado:</h3>
+    <input type="text" id="result" placeholder="Resultado">
+    <br /><br />
+    <button onclick="round()">round</button>
+    <button onclick="floor()">floor</button>
+    <button onclick="ceil()">ceil</button>
+</body>
+</html>
