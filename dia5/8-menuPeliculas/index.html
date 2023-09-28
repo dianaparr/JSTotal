@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <head>
+        <title>Menú cine</title>
+        <link rel="stylesheet" href="misEstilos.css">
+        <script src="misScripts.js"></script>
+    </head>
+    <body>
+        <h1>&#127871; ¡Bienvenidos al cine! &#127871;</h1>
+        <h3>--- Menú ---</h3>
+        <p>Ingresa tu edad y selecciona un género para que te recomendemos una película:</p>
+        <p>Edad: <input type="text" id="edad"></p>   
+        <button onclick="recomendar('drama')">Drama</button>
+        <button onclick="recomendar('comedia')">Comedia</button>
+        <button onclick="recomendar('musical')">Musical</button>
+        <button onclick="recomendar('crimen')">Crimen</button>   
+        <h3>Nuestra recomendación:</h3>
+        <h2 id="recomendacion">&#127916;</h2>
+    </body>
+</html>
