@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(208, 203, 227);
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    text-shadow: 2px 2px 5px blueviolet;
+}
+
+p {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+input {
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+button {
+    background-color: blueviolet;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .15) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 2px 16px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
