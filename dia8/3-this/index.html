@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Objeto</title>
+</head>
+<body>
+    <script>
+        let perro = {
+            nombre: "Rosky",
+            raza: "Criollito",
+            edad: 3,
+            ladrar() {
+                console.log("Guau guau")
+            },
+            saludar() {
+                console.log("Hola, me llamo " + this.nombre)
+            }
+        }
+
+        // this -> hace referencia al mismo objeto en el que se invoque
+        let perro2 = {
+            nombre: "Rey",
+            raza: "ShinTzu",
+            edad: 9,
+            ladrar() {
+                console.log("Guau guau")
+            },
+            saludar() {
+                console.log("Hola, me llamo " + this.nombre)
+            }
+        }
+
+    </script>
+</body>
+</html>
