@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Objeto</title>
+</head>
+<body>
+    <script>
+        let perro = {
+            nombre: "Rosky",
+            raza: "Criollito",
+            edad: 3,
+            ladrar() {
+                console.log("Guau guau")
+            }
+        }
+
+        // se le suma a la edad 1 mas
+        function cumplirAnios() {
+            perro.edad++
+        }
+
+        // agregar nuevo elemento al objeto
+        perro["colorOjos"] = "marron" 
+    </script>
+</body>
+</html>
