@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop for In</title>
+</head>
+<body>
+    <script>
+        function Perro(raza, edad, color) {
+            this.patas = 4
+            this.raza = raza
+            this.edad = edad
+            this.color = color
+            this.ladrar = () => console.log('Guau guau')
+        }
+
+        let rosky = new Perro('Criollito', 3, 'marron')
+        let rey = new Perro('ShinTzu', 5, 'blanco')
+        let ubuntu = new Perro('Dalmata', 10, 'manchas')
+
+        for (let caracteristica in rey) {
+            console.log(`${caracteristica}: ${rey[caracteristica]}`)
+        }
+    </script>
+</body>
+</html>
