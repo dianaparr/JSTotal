@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parámetros de constructor</title>
+</head>
+<body>
+    <script>
+        function Perro(raza, edad) {
+            this.patas = 4
+            this.raza = raza
+            this.edad = edad
+            this.ladrar = () => console.log("Guau guau")
+        }
+
+        // crear objetos con unas particularidades diferentes a todos los Perros
+        let rosky = new Perro("Criollito", 3)
+        let rey = new Perro("ShinTzu", 10)
+        let ubuntu = new Perro("Dalmata", 6)
+
+        function Empleado(nombre, apellido, edad, cargo) {
+            this.nombre = nombre
+            this.apellido = apellido
+            this.edad = edad
+            this.cargo = cargo
+            this.presentarse = () => console.log(`Mi nombre es ${this.nombre} ${this.apellido} soy ${this.cargo} y tengo ${this.edad} años de edad`)
+        }
+
+        let camila = new Empleado("Camila", "Villa", 23, "operaria")
+    </script>
+</body>
+</html>
