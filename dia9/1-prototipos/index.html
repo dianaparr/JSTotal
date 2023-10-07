@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+        let perro = {nombre: 'Rosky'}
+
+        // crear instancia del prototipo perro
+        // solo el objeto prototipo tiene el valor almacenado, y las
+        // instancias son un enlace para acceder a las propiedades del prototipo (por medio de __proto__)
+        let perro1 = Object.create(perro)
+
+        // perro1 = {}
+        // perro1.nombre = 'Rosky'
+        // perro1.__proto__ = {nombre: 'Rosky'}
+
+        // perro.__proto__ => es lo que recibe de su prototipo.
+    </script>
+</body>
+</html>
