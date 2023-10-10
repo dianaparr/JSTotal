@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Prototipicos</title>
+</head>
+<body>
+    <script>
+        function Libro(autor, titulo, cdadPags) {
+            this.autor = autor
+            this.titulo = titulo
+            this.cdadPags = cdadPags
+        }
+
+        let libro1 = new Libro('Albert Camus', 'El extranjero', 120)
+
+        // Herencia: libro1 -> Libro -> Object()
+        // Buscar: Propiedades y métodos heredables, Object.prototype
+    </script>
+</body>
+</html>
