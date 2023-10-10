@@ -17,6 +17,13 @@
 
         // Herencia: libro1 -> Libro -> Object()
         // Buscar: Propiedades y métodos heredables, Object.prototype
+
+        let libro2 = Object.create(libro1)
+
+        // El constructor tambien es una función y un prototipo
+        let libro3 = new libro1.constructor('Frank Kafka', 'La Metamorfosis', 100)
+        // libro3 se instancia del objeto Libro
+        console.log(libro3.constructor.name)
     </script>
 </body>
 </html>
