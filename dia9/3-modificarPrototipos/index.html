@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Prototipos</title>
+</head>
+<body>
+    <script>
+        // 1. Declarar las propiedades en el constructor
+        function Libro(autor, titulo, cdadPags) {
+            this.autor = autor
+            this.titulo = titulo
+            this.cdadPags = cdadPags
+        }
+
+        let libro1 = new Libro('Albert Camus', 'El extranjero', 120)
+
+        // 2. Declarar métodos en el prototipo
+        Libro.prototype.abrirLibro = function() {
+            alert(this.titulo + ' ha sido abierto')
+        }
+
+        // definir propiedades dentro de prototype: menos flexibilidad
+        // Libro.prototype.edicion = 1995
+        // Mas flexible. Hay que volver a definir el valor en los objetos:
+        // Usar esto solo cuando sean variables constantes o que siempre son verdaderas
+        Libro.prototype.edicion = this.edicion
+
+        // Ejemplo de: Propiedades en el constructor
+        function UnObjeto(a) {
+            this.a = a
+        }
+        // Ejemplo de métodos en el prototipo
+        UnObjeto.prototype.metodo1 = function() {}
+        UnObjeto.prototype.metodo2 = function() {}
+    </script>
+</body>
+</html>
