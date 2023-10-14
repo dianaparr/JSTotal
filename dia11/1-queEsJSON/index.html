@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <div id="nombre">
+    </div>
+    <script>
+        // Ejemplo ilustrativo: Cómo extraer datos de un JSON
+        /* let miPersona = {
+            "nombre": "Pedro Toledo",
+            "edad": 35,
+            "esEstudiante": false,
+            "direccion": {
+                "calle": "Av. Siempreviva 742",
+                "ciudad": "Springfield"
+            },
+            "telefonos": [
+                "555-555-5555",
+                "555-555-5556"
+            ]
+        }
+
+        let elementoTexto = document.getElementById("nombre")
+        elementoTexto.textContent = miPersona.nombre*/
+
+        let datosJson
+        // solicitar información de un objeto JSON
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', 'persona.json', true)
+        xhr.responseType = 'json'
+        // onload = respuesta satisfactoria del servidor: es un evento
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+                datosJson = xhr.response
+                let elementoTexto = document.getElementById("nombre")
+                elementoTexto.textContent = datosJson.nombre
+            } else {
+                // manejo del error
+            }
+        }
+        xhr.send()
+
+    </script>
+</body>
+</html>
