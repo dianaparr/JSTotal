@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronia y Asincronia</title>
+</head>
+<body>
+    <script>
+        // accion 1
+        console.log('Inicio del código sincrónico')
+
+        // accion 2: asincronia
+        setTimeout(() => {
+            for (let i = 0; i < 10; i++) {
+                console.log(i)
+            }
+        }, 0)
+
+        // accion 3
+        console.log('Fin del código síncrono')
+    </script>
+</body>
+</html>
