@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Peliculas y Series</title>
+</head>
+<body>
+    <h1>Mis Peliculas y Series</h1>
+    <h3>Favoritas</h3>
+    <br>
+    <p>Escoge una opción: </p>
+    <select id="listFiles">
+        <option value="peliculas.json">Peliculas</option>
+        <option value="series.json">Series</option>
+    </select>
+    <br><br>
+    <p>Ingresa el nombre de la peli o serie: </p>
+    <input type="text" id="inputUser" placeholder="Escribe acá...">
+    <button id="searchButton">Buscar</button>
+    <br>
+    <ul id="showResults"></ul>
+</body>
+<script src="misScripts.js"></script>
+</html>
