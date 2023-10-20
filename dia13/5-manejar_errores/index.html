@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de errores</title>
+</head>
+<body>
+  <script>
+    /*
+    // 1. callbacks
+    let sumarNumeros = (a, b, callback) => {
+      setTimeout(() => {
+        if (typeof a != 'number' || typeof b != 'number')
+          return callback(new Error('Algún argumento no es número'))
+        callback(null, a + b)
+      }, 1000)
+    }
+
+    sumarNumeros(1, 2, (err, result) => {
+      if (err) console.error(err)
+      else console.log(result)
+    })
+    
+   
+
+    // 2. promesas
+    let sumarNumeros = (a, b) => {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (typeof a != 'number' || typeof b != 'number')
+              reject(new Error('Ambos argumentos deben ser números'))
+            else resolve(a + b)
+          }, 1000)
+        })
+
+    }
+
+    sumarNumeros(1, 2)
+    .then((result) => {
+      console.log(result)
+    })
+    .catch((err) => {
+      console.error(err)
+    })*/
+
+
+    // 3. async-await
+    let sumarNumeros = async (a, b) => {
+      if (typeof a != 'number' || typeof b != 'number')
+        throw new Error('Alguno de los argumentos no es un número')
+      return a + b
+    }
+
+    let manejarErrores = async () => {
+      try {
+        let result = await sumarNumeros('2', 3)
+        console.log(result)
+      } catch (err) {
+        console.error(err.message)
+      }
+    }
+
+    manejarErrores()
+
+  </script>
+</body>
+</html>
