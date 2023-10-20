@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async/Await</title>
+</head>
+<body>
+  <script>
+    /* // Ejemplo sencillo
+    let obtenerDatos = async () => {
+      let respuesta = await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico')
+      let datos = await respuesta.json()
+      console.log(datos)
+    }
+
+    obtenerDatos()
+    console.log('El código sigue')
+    */
+    let getAll = async () => {
+      console.log('Este código está al comienzo')
+      let responseGasoline = await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico')
+      let dataGasoline = await responseGasoline.json()
+
+      console.log('Este código está al medio')
+
+      let responseDollar = await fetch('https://open.er-api.com/v6/latest/USD')
+      let dataDollar = await responseDollar.json()
+
+      console.log(dataGasoline, dataDollar)
+      console.log('Este código está al final')
+    }
+
+    getAll()
+  </script>
+</body>
+</html>
