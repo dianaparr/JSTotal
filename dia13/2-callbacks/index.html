@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <script>
+        // Situación ejemplo: una fila de espera y decides ir por un café.
+        // La señora de adelante que te cuida el puesto y te avisa cuando sea tu turno: callback
+        let avanzaFila = (callback) => {
+            setTimeout(() => {
+                console.log('Tu turno ha llegado')
+                callback()
+            }, 5000)
+        }
+
+        let mujerTeLlama = () => {
+            console.log('Te presentas a tu turno')
+        }
+
+        console.log('Llegas a la fila')
+        avanzaFila(mujerTeLlama)
+        console.log('Te vas a comprar café')
+    </script>
+</body>
+</html>
