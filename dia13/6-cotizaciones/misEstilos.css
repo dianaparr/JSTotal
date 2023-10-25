@@ -1,0 +1,41 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(235, 212, 183);
+    text-align: center;
+}
+
+img {
+    width: 10%;
+    margin: 10px;
+    vertical-align: middle;
+    border-radius: 50%
+}
+
+#encabezado {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#wait img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+#table {
+    color: grey;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#table div {
+    margin: 20px;
+}
+
+#current_date {
+    font-size: 15px;
+    font-style: italic;
+}
