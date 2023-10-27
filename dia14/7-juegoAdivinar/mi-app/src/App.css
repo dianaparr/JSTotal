@@ -1,0 +1,48 @@
+body {
+    background-color: bisque;
+}
+
+.App {
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+p {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+}
+
+img {
+    width: 200px;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px solid #43484a;
+    background-color: transparent;
+    padding: 5px;
+    width: 30%;
+    color: white;
+}
+
+input::placeholder {
+    color:white;
+}
+
+button {
+    border-radius: 5px;
+    color:white;
+    background-color: darkred;
+    width: 30%;
+    height: 2rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
