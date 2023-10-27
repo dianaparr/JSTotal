@@ -1,0 +1,24 @@
+{
+    "nombre": "Pedro Toledo",
+    "edad": 35,
+    "numeroCuenta": "0077763111",
+    "CBU": "1234",
+    "direccion": {
+        "calle": "Av. Siempreviva 742",
+        "ciudad": "Springfield"
+    },
+    "telefonos": [
+        "555-555-5555",
+        "555-555-5556"
+    ],
+    "saldos": [
+        {
+            "moneda": "USD",
+            "monto": 45988900.98
+        },
+        {
+            "moneda": "EUR",
+            "monto": 93400500.61
+        }
+    ]
+}
